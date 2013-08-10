@@ -9,31 +9,26 @@ Essa é uma versão simplificada da documentação da API.
 
 ## URL
 
-As urls para acesso à API são:
+`https://newsmonitor.com.br/api/`
 
-**Produção** (utiliza https)
+**Atenção:** Para a segurança de nossos clientes, a API do NewsMonitor requer o uso do protocolo HTTPS. Caso esteja tendo problemas com nossos certificados, verifique se seu cliente HTTP está utilizando SSL v3.
 
-> https://newsmonitor.com.br/api/
+    curl_setopt($ch, CURLOPT_SSLVERSION, 3);
 
-**Sandbox** (**não** utiliza https)
+Se o problema persistir, recomendamos que atualize os certificados em seu servidor.
 
-> http://staging.newsmonitor.com.br/api/
-
-## Headers
-
-A API suporta somente JSON mas pode suportar outros padrões no futuro.<br />
-Recomendamos que utilize os seguinte headers:
-
-	"Content-Type": "application/json"
-	"Accept": "application/json"
+    $ sudo update-ca-certificates
 
 ## Autenticação
 
-Para autenticação na API, você deve utilizar HTTP Basic. Sendo o user seu `public_token` e o password o seu `private_token`.  O header da requisição deve conter o seguinte valor:
+A autenticação na API utiliza o padrão HTTP Basic, sendo o user seu `public_token` e o password seu `private_token`.
 
-	"Authorization": "Basic " + BASE64(PUBLIC_TOKEN + ":" + PRIVATE_TOKEN)
+Exemplo de autenticação em HTTP:
 
-Exemplo de autenticação usando o curl em PHP.
+	GET https://newsmonitor.com.br/api/ HTTP/1.1
+    Authorization: "Basic " + BASE64(PUBLIC_TOKEN + ":" + PRIVATE_TOKEN)
 
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_USERPWD, $public_token . ":" . $private_token;
+Exemplo de autenticação usando o CURL em PHP:
+
+	curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+    curl_setopt($ch, CURLOPT_USERPWD, "$public_token:$private_token";
