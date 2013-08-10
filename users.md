@@ -15,13 +15,15 @@ A API de usuários permite criar, atualizar e desativar usuários.
 ### <a name="create">Criar um usuário</a>
 
 	POST /users HTTP/1.1
+	Content-Type: "application/json"
+	Accept: "application/json"
 
 **Requisição** *(Todos os parâmetros são obrigatórios)*
 
 	{
 		"email": "foobar@example.com",
 		"name": "Foo Bar",
-		"password": "senha"
+		"password": "password"
 	}
 
 **Resposta**
@@ -37,6 +39,8 @@ A API de usuários permite criar, atualizar e desativar usuários.
 ### <a name="index">Listar todos usuários</a>
 
 	GET /users HTTP/1.1
+	Content-Type: "application/json"
+	Accept: "application/json"
 
 **Resposta:**
 
@@ -58,9 +62,9 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a name="show">Listar um usuário específico</a>
 
-	GET /users/id HTTP/1.1
-	GET /users?id=id HTTP/1.1
 	GET /users?email=foobar@example.com HTTP/1.1
+	Content-Type: "application/json"
+	Accept: "application/json"
 
 **Resposta:**
 
@@ -74,24 +78,24 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a name="update">Atualizar um usuário</a>
 
-	PUT /users/id HTTP/1.1
-	PUT /users?id=id HTTP/1.1
 	PUT /users?email=foobar@example.com HTTP/1.1
+	Content-Type: "application/json"
+	Accept: "application/json"
 
 **Requisição** *(Todos os parâmetros são opcionais, basta passar os que quiser atualizar
 )*
 
 	{
-		"email": "newemail@example.com",
+		"email": "foobar_new_email@example.com",
 		"name": "New Name",
-		"password": "senha"
+		"password": "newpassword"
 	}
 
 **Resposta**
 
 	{
 		"id": "1",
-		"email": "newemail@example.com",
+		"email": "foobar_new_email@example.com",
 		"name": "New Name",
 		"created_at": "2013-07-23 19:39:22",
 		"updated_at": "2013-07-23 19:39:22"
