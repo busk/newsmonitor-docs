@@ -31,4 +31,4 @@ Exemplo de autenticação em HTTP:
 Exemplo de autenticação usando o CURL em PHP:
 
 	curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-    curl_setopt($ch, CURLOPT_USERPWD, "$public_token:$private_token";
+    curl_setopt($ch, CURLOPT_USERPWD, $public_token . ":" .$private_token);

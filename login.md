@@ -44,7 +44,7 @@ Com o token em mãos, o cliente redireciona o usuário para a página de login, 
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_SSLVERSION, 3);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-    curl_setopt($ch, CURLOPT_USERPWD, "$public_token:$private_token";
+    curl_setopt($ch, CURLOPT_USERPWD, $public_token . ":" .$private_token);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     
     $data = json_decode(curl_exec($ch));
