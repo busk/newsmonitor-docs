@@ -116,7 +116,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
     {
         "id": "1",
         "user_id": "999",
-        "value": "active",
+        "value": "enabled",
         "created_at": "2013-10-15 18:27:00",
         "updated_at": "2013-10-15 18:27:00"
     }
