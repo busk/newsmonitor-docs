@@ -64,7 +64,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a name="show">Listar um usuário específico</a>
 
-    GET /users?email=foobar@example.com HTTP/1.1
+    GET /users/:id HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -80,7 +80,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a name="update">Atualizar um usuário</a>
 
-    PUT /users?email=foobar@example.com HTTP/1.1
+    PUT /users/:id HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
