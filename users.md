@@ -84,8 +84,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
     Content-Type: "application/json"
     Accept: "application/json"
 
-**Requisição** *(Todos os parâmetros são opcionais, basta passar os que quiser atualizar
-)*
+**Requisição** *(Todos os parâmetros são opcionais, basta passar os que quiser atualizar)*
 
     {
         "email": "foobar_new_email@example.com",
