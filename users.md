@@ -31,7 +31,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 **Resposta**
 
     {
-        "id": "1",
+        "id": "467",
         "email": "foobar@example.com",
         "name": "Foo Bar",
         "created_at": "2013-07-23 19:39:22",
@@ -48,13 +48,13 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
     [
         {
-            "id": "1",
+            "id": "467",
             "email": "foobar@example.com",
             "name": "Foo Bar",
             "created_at": "2013-07-23 19:39:22",
             "updated_at": "2013-07-23 19:39:22"
         },{
-            "id": "2",
+            "id": "468",
             "email": "lorem@ipsum.com",
             "name": "Lorem Ipsum",
             "created_at": "2013-07-23 19:39:22",
@@ -71,7 +71,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 **Resposta:**
 
     {
-        "id": "1",
+        "id": "467",
         "email": "foobar@example.com",
         "name": "Foo Bar",
         "created_at": "2013-07-23 19:39:22",
@@ -95,7 +95,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 **Resposta**
 
     {
-        "id": "1",
+        "id": "467",
         "email": "foobar_new_email@example.com",
         "name": "New Name",
         "created_at": "2013-07-23 19:39:22",
@@ -111,11 +111,11 @@ A API de usuários permite criar, atualizar e desativar usuários.
 **Resposta**
 
     {
-        "id": "1",
-        "user_id": "999",
+        "id": "9472",
+        "user_id": "467",
         "value": "disabled",
-        "created_at": "2013-10-15 18:27:00",
-        "updated_at": "2013-10-15 18:27:00"
+        "created_at": "2013-07-23 19:39:22",
+        "updated_at": "2013-07-23 19:39:22"
     }
 
 ### <a name="active">Ativar um usuário</a>
@@ -127,9 +127,9 @@ A API de usuários permite criar, atualizar e desativar usuários.
 **Resposta**
 
     {
-        "id": "1",
-        "user_id": "999",
+        "id": "9473",
+        "user_id": "467",
         "value": "enabled",
-        "created_at": "2013-10-15 18:27:00",
-        "updated_at": "2013-10-15 18:27:00"
+        "created_at": "2013-07-23 19:39:22",
+        "updated_at": "2013-07-23 19:39:22"
     }
