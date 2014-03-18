@@ -25,10 +25,10 @@ A autenticação na API utiliza o padrão HTTP Basic, sendo o user seu `public_t
 
 Exemplo de autenticação em HTTP:
 
-	GET https://newsmonitor.com.br/api/ HTTP/1.1
+    GET https://newsmonitor.com.br/api/ HTTP/1.1
     Authorization: "Basic " + BASE64(PUBLIC_TOKEN + ":" + PRIVATE_TOKEN)
 
 Exemplo de autenticação usando o CURL em PHP:
 
-	curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+    curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
     curl_setopt($ch, CURLOPT_USERPWD, $public_token . ":" .$private_token);

@@ -14,19 +14,19 @@ A Api de Login permite autenticar um usuário no NewsMonitor sem que ele precise
 
 ### <a name="create">Criar um token</a>
 
-	POST /token HTTP/1.1
+    POST /token HTTP/1.1
 
 **Requisição**
 
-	{
-		"email": "foobar@example.com"
-	}
+    {
+        "email": "foobar@example.com"
+    }
 
 **Resposta**
 
-	{
-		"token": "ckJmZHNhMTM3NjMzMzcxOGI1aDRMS2MxNjZkbkZLVDE="
-	}
+    {
+        "token": "ckJmZHNhMTM3NjMzMzcxOGI1aDRMS2MxNjZkbkZLVDE="
+    }
 
 ### <a name="redirect">Redirecionado o usuário</a>
 
