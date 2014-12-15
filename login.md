@@ -38,7 +38,7 @@ Com o token em mãos, o cliente redireciona o usuário para a página de login, 
 ### <a name="example">Exemplo completo em PHP</a>
 
     // obtains token
-    $url = 'https://newsmonitor.com.br/api/token?' . http_build_query(array('email' => 'foobar@example.com'));
+    $url = 'https://newsmonitor.com.br/api/tokens?' . http_build_query(array('email' => 'foobar@example.com'));
     
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
