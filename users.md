@@ -1,20 +1,26 @@
 ---
 layout: main
 title: Usuários
+nav:
+    - text: "Criar um usuário"
+      href: "#create"
+    - text: "Listar todos usuários"
+      href: "#index"
+    - text: "Listar um usuário específico"
+      href: "#show"
+    - text: "Atualizar um usuário"
+      href: "#update"
+    - text: "Desativar um usuário"
+      href: "#disable"
+    - text: "Ativar um usuário"
+      href: "#enable"
 ---
 
 ## Usuários
 
 A API de usuários permite criar, atualizar e desativar usuários.
 
-- [Criar um usuário](#create)
-- [Listar todos usuários](#index)
-- [Listar um usuário específico](#show)
-- [Atualizar um usuário](#update)
-- [Desativar um usuário](#disable)
-- [Ativar um usuário](#enable)
-
-### <a name="create">Criar um usuário</a>
+### <a id="create">Criar um usuário</a>
 
     POST /users HTTP/1.1
     Content-Type: "application/json"
@@ -38,7 +44,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
         "updated_at": "2013-07-23 19:39:22",
     }
 
-### <a name="index">Listar todos usuários</a>
+### <a id="index">Listar todos usuários</a>
 
     GET /users HTTP/1.1
     Content-Type: "application/json"
@@ -62,7 +68,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
         }
     ]
 
-### <a name="show">Listar um usuário específico</a>
+### <a id="show">Listar um usuário específico</a>
 
     GET /users/:id HTTP/1.1
     Content-Type: "application/json"
@@ -78,7 +84,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
         "updated_at": "2013-07-23 19:39:22"
     }
 
-### <a name="update">Atualizar um usuário</a>
+### <a id="update">Atualizar um usuário</a>
 
     PUT /users/:id HTTP/1.1
     Content-Type: "application/json"
@@ -102,7 +108,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
         "updated_at": "2013-07-23 19:39:22"
     }
 
-### <a name="disable">Desativar um usuário</a>
+### <a id="disable">Desativar um usuário</a>
 
     POST /users/:id/disable HTTP/1.1
     Content-Type: "application/json"
@@ -118,7 +124,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
         "updated_at": "2013-07-23 19:39:22"
     }
 
-### <a name="enable">Ativar um usuário</a>
+### <a id="enable">Ativar um usuário</a>
 
     POST /users/:id/enable HTTP/1.1
     Content-Type: "application/json"

@@ -1,13 +1,18 @@
 ---
 layout: main
 title: Introdução
+nav:
+    - text: "URL"
+      href: "#url"
+    - text: "Autenticação"
+      href: "#auth"
 ---
 
 ## Introdução
 
 Essa é uma versão simplificada da documentação da API.
 
-### <a name="url">URL</a>
+### <a id="url">URL</a>
 
 `https://newsmonitor.com.br/api/`
 
@@ -19,7 +24,7 @@ Se o problema persistir, recomendamos que atualize os certificados em seu servid
 
     $ sudo update-ca-certificates
 
-### <a name="auth">Autenticação</a>
+### <a id="auth">Autenticação</a>
 
 A autenticação na API utiliza o padrão HTTP Basic, sendo o user seu `public_token` e o password seu `private_token`.
 

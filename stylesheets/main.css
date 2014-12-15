@@ -1,8 +1,9 @@
 body {
     padding-top: 70px;
+    position: relative;
 }
 
-a[name] {
+a[id] {
     margin-top: -70px;
     padding-top: 70px;
 }

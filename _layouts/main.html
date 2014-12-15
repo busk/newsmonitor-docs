@@ -15,7 +15,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
     <script src="/javascripts/main.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#sidebar">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -37,7 +37,14 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
+            <div id="sidebar" class="col-lg-3">
+                <div id="sidebar">
+                    <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="0" data-offset-bottom="200">
+                        {% for item in page.nav %}
+                            <li><a href="{{ item.href }}">{{ item.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
             <div class="col-lg-9">
                 {{ content }}
