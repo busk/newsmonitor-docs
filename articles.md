@@ -24,12 +24,12 @@ nav:
             "articles": [
                 {
                     "id": 172629905,
-                    "created_at": "2015-06-25 12:30:30",
+                    "created_at": "2015-06-25T12:30:30+00:00",
                     "type": "articles",
                     "title": "Luan Santana dedica show em Aracaju ao amigo Cristiano Araújo",
                     "language_code": "pt",
                     "url": "http://g1.globo.com/se/sergipe/sao-joao/2015/noticia/2015/06/luan-santana-dedica-show-em-aracaju-ao-amigo-cristiano-araujo.html",
-                    "published_at": "2015-06-25 11:57:35",
+                    "published_at": "2015-06-25T11:57:35+00:00",
                     "directories": [
                         "Entretenimento",
                         "Cotidiano"
@@ -39,7 +39,7 @@ nav:
                             "id": 2,
                             "permalink": "g1",
                             "name": "G1",
-                            "published_at": "2015-06-25 11:57:35",
+                            "published_at": "2015-06-25T11:57:35+00:00",
                             "thumbnail": "b23b85d2212c4fdca994.png",
                             "thumbnail_url": "https://s3.amazonaws.com/spixdiscovery/sites/2/favicon/large_b23b85d2212c4fdca994.png",
                             "url": "http://g1.globo.com/"
@@ -149,12 +149,12 @@ nav:
             "articles": [
                 {
                     "id": 172537913,
-                    "created_at": "2015-06-24 21:48:32",
+                    "created_at": "2015-06-24T21:48:32+00:00",
                     "type": "articles",
                     "title": "Eliana compra passagem para desempregado em aeroporto no Rio",
                     "language_code": "pt",
                     "url": "http://ego.globo.com/famosos/noticia/2015/06/eliana-compra-passagem-para-desempregado-em-aeroporto-no-rio.html",
-                    "published_at": "2015-06-24 21:33:58",
+                    "published_at": "2015-06-24T21:33:58+00:00",
                     "directories": [
                         "Celebridades"
                     ],
@@ -163,7 +163,7 @@ nav:
                             "id": 11289,
                             "permalink": "ego",
                             "name": "Ego",
-                            "published_at": "2015-06-24 21:33:58",
+                            "published_at": "2015-06-24T21:33:58+00:00",
                             "thumbnail": "3mY8ZA8KI5x26jlZIufBcuPZG3Y1tWeZ0HCpRckd.png",
                             "thumbnail_url": "https://s3.amazonaws.com/spixdiscovery/sites/11289/favicon/large_3mY8ZA8KI5x26jlZIufBcuPZG3Y1tWeZ0HCpRckd.png",
                             "url": "http://ego.globo.com/"
@@ -268,12 +268,12 @@ nav:
             "articles": [
                 {
                     "id": 172629905,
-                    "created_at": "2015-06-25 12:30:30",
+                    "created_at": "2015-06-25T12:30:30+00:00",
                     "type": "articles",
                     "title": "Luan Santana dedica show em Aracaju ao amigo Cristiano Araújo",
                     "language_code": "pt",
                     "url": "http://g1.globo.com/se/sergipe/sao-joao/2015/noticia/2015/06/luan-santana-dedica-show-em-aracaju-ao-amigo-cristiano-araujo.html",
-                    "published_at": "2015-06-25 11:57:35",
+                    "published_at": "2015-06-25T11:57:35+00:00",
                     "directories": [
                         "Entretenimento",
                         "Cotidiano"
@@ -283,7 +283,7 @@ nav:
                             "id": 2,
                             "permalink": "g1",
                             "name": "G1",
-                            "published_at": "2015-06-25 11:57:35",
+                            "published_at": "2015-06-25T11:57:35+00:00",
                             "thumbnail": "b23b85d2212c4fdca994.png",
                             "thumbnail_url": "https://s3.amazonaws.com/spixdiscovery/sites/2/favicon/large_b23b85d2212c4fdca994.png",
                             "url": "http://g1.globo.com/"

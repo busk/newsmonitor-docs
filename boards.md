@@ -181,16 +181,16 @@ nav:
             "article_id": 154909879,
             "user_id": 34928,
             "description": "",
-            "created_at": "2015-06-25 13:55:08",
-            "updated_at": "2015-06-25 13:55:08",
+            "created_at": "2015-06-25T13:55:08+00:00",
+            "updated_at": "2015-06-25T13:55:08+00:00",
             "article": {
                 "id": 154909879,
-                "created_at": "2015-03-23 17:20:38",
+                "created_at": "2015-03-23T17:20:38+00:00",
                 "type": "articles",
                 "title": "Pillars of Eternity video reveals the pressures of Kickstarter success",
                 "language_code": "en",
                 "url": "http:\\/\\/www.pcgamer.com\\/pillars-of-eternity-video-reveals-the-pressures-of-kickstarter-success\\/",
-                "published_at": "2015-03-23 17:13:47",
+                "published_at": "2015-03-23T17:13:47+00:00",
                 "directories": [
                     "Games"
                 ],
@@ -199,7 +199,7 @@ nav:
                         "id": 12122,
                         "permalink": "pc-gamer",
                         "name": "PC Gamer",
-                        "published_at": "2015-03-23 17:13:47",
+                        "published_at": "2015-03-23T17:13:47+00:00",
                         "thumbnail": "ry50kF16tPcTqVyitGYOHxLTeAoyrH5HuJATu98o.png",
                         "thumbnail_url": "https:\\/\\/s3.amazonaws.com\\/spixdiscovery\\/sites\\/12122\\/favicon\\/large_ry50kF16tPcTqVyitGYOHxLTeAoyrH5HuJATu98o.png",
                         "url": "http:\\/\\/www.pcgamer.com"
@@ -276,10 +276,10 @@ nav:
                 "avatar_filename": null,
                 "avatar_height": "300",
                 "avatar_width": "300",
-                "activity_at": "2015-06-25 13:55:04",
+                "activity_at": "2015-06-25T13:55:04+00:00",
                 "activity_count": 3233,
-                "created_at": "2015-01-30 21:36:41",
-                "updated_at": "2015-06-25 13:52:46"
+                "created_at": "2015-01-30T21:36:41+00:00",
+                "updated_at": "2015-06-25T13:52:46+00:00"
             },
             "comments": []
         }
@@ -304,13 +304,13 @@ nav:
             "avatar_filename": null,
             "avatar_height": "300",
             "avatar_width": "300",
-            "activity_at": "2015-06-25 14:05:05",
+            "activity_at": "2015-06-25T14:05:05+00:00",
             "activity_count": 3236,
-            "created_at": "2015-01-30 21:36:41",
-            "updated_at": "2015-06-25 13:52:46",
+            "created_at": "2015-01-30T21:36:41+00:00",
+            "updated_at": "2015-06-25T13:52:46+00:00",
             "status": {
                 "value": "enabled",
-                "created_at": "2015-01-30 21:37:13"
+                "created_at": "2015-01-30T21:37:13+00:00"
             }
         }
     ]
