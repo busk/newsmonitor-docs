@@ -17,18 +17,13 @@ A Api de Login permite autenticar um usuário no NewsMonitor sem que ele precise
 
 ### <a id="create">Criar um token</a>
 
-    POST /tokens HTTP/1.1
-
-**Requisição**
-
-    {
-        "email": "foobar@example.com"
-    }
+    POST /account/users/:ID/token HTTP/1.1
+    Accept: "application/json"
 
 **Resposta**
 
     {
-        "token": "ckJmZHNhMTM3NjMzMzcxOGI1aDRMS2MxNjZkbkZLVDE="
+        "token": "REZKZUhhMTQzNTE3NTIyMmJrdmFNamMzNDkzNGRXNmVqQQ=="
     }
 
 ### <a id="redirect">Redirecionado o usuário</a>
@@ -41,13 +36,12 @@ Com o token em mãos, o cliente redireciona o usuário para a página de login, 
 ### <a id="example">Exemplo completo em PHP</a>
 
     // obtains token
-    $url = 'https://newsmonitor.com.br/api/tokens?' . http_build_query(array('email' => 'foobar@example.com'));
+    $url = 'https://newsmonitor.com.br/api/account/token?' . http_build_query(array('email' => 'foobar@example.com'));
     
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_SSLVERSION, 3);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-    curl_setopt($ch, CURLOPT_USERPWD, $public_token . ":" .$private_token);
+    curl_setopt($ch, CURLOPT_USERPWD, $token . ":");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     
     $data = json_decode(curl_exec($ch));
