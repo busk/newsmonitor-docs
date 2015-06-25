@@ -14,8 +14,15 @@ nav:
 
 ### <a id="most_published">Mais publicados</a>
 
-    GET /articles/most_published/:LANGUAGE HTTP/1.1 (en | es | pt)
+    GET /articles/most_published/:LANGUAGE HTTP/1.1
     Accept: "application/json"
+
+**Parâmetros**
+
+-  `LANGUAGE` *(opcional)*
+    - `pt` para Português *(valor padrão)*
+    - `en` para Inglês
+    - `es` para Espanhol
 
 **Resposta**
 
@@ -139,8 +146,15 @@ nav:
 
 ### <a id="most_shared">Mais compartilhados</a>
 
-    GET /articles/most_shared/:LANGUAGE HTTP/1.1 (en | es | pt)
+    GET /articles/most_shared/:LANGUAGE HTTP/1.1 
     Accept: "application/json"
+
+**Parâmetros**
+
+-  `LANGUAGE` *(opcional)*
+    - `pt` para Português *(valor padrão)*
+    - `en` para Inglês
+    - `es` para Espanhol
 
 ***Resposta***
 
@@ -258,7 +272,7 @@ nav:
 
 ### <a id="recommended">Recomendados</a>
 
-    GET /articles/recommended/:LANGUAGE HTTP/1.1 (en | es | pt)
+    GET /articles/recommended/ HTTP/1.1 
     Accept: "application/json"
 
 ***Resposta***
