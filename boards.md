@@ -21,6 +21,7 @@ nav:
 ### <a id="index">Listar as pasta do usuário</a>
 
     GET /boards HTTP/1.1
+    Content-Type: "application/json"
     Accept: "application/json"
 
 **Resposta**
@@ -105,6 +106,7 @@ nav:
 ### <a id="show">Exibir uma pasta</a>
 
     GET /boards/:ID HTTP/1.1
+    Content-Type: "application/json"
     Accept: "application/json"
 
 ***Resposta***
@@ -170,7 +172,8 @@ nav:
 ***Requisição***
 
     GET /boards/:ID/articles HTTP/1.1
-    Accept: "application/json
+    Content-Type: "application/json"
+    Accept: "application/json"
 
 ***Resposta***
 
@@ -290,7 +293,8 @@ nav:
 ***Requisição***
 
     GET /boards/:ID/collaborators HTTP/1.1
-    Accept: "application/json
+    Content-Type: "application/json"
+    Accept: "application/json"
 
 ***Resposta***
     
