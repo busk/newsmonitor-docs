@@ -6,7 +6,7 @@ nav:
       href: "#create"
     - text: "Listar todos usuários"
       href: "#index"
-    - text: "Listar um usuário específico"
+    - text: "Exibir um usuário específico"
       href: "#show"
     - text: "Atualizar um usuário"
       href: "#update"
@@ -22,11 +22,11 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="create">Criar um usuário</a>
 
-    POST /users HTTP/1.1
+    POST /account/users HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
-**Requisição** *(Todos os parâmetros são obrigatórios)*
+**Requisição** *(Todos os parâmetros são obrigatórios, exceto password)*
 
     {
         "email": "foobar@example.com",
@@ -37,16 +37,33 @@ A API de usuários permite criar, atualizar e desativar usuários.
 **Resposta**
 
     {
-        "id": "467",
+        "username": "foobar",
+        "name": "foobar",
         "email": "foobar@example.com",
-        "name": "Foo Bar",
-        "created_at": "2013-07-23 19:39:22",
-        "updated_at": "2013-07-23 19:39:22",
+        "updated_at": {
+            "date": "2015-06-24 18:58:39.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+        },
+        "created_at": {
+            "date": "2015-06-24 18:58:39.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+        },
+        "id": 34934,
+        "status": {
+            "value": "enabled",
+            "created_at": {
+                "date": "2015-06-24 18:58:39.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
+            }
+        }
     }
 
 ### <a id="index">Listar todos usuários</a>
 
-    GET /users HTTP/1.1
+    GET /account/users HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -54,23 +71,46 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
     [
         {
-            "id": "467",
+            "id": 34928,
+            "email": "barfoo@example.com",
+            "username": "barfoo",
+            "name": "barfoo",
+            "about": null,
+            "avatar_filename": null,
+            "avatar_height": "300",
+            "avatar_width": "300",
+            "activity_at": "2015-06-24 17:56:44",
+            "activity_count": 3183,
+            "created_at": "2015-01-30 21:36:41",
+            "updated_at": "2015-06-24 18:43:51",
+            "status": {
+                "value": "enabled",
+                "created_at": "2015-01-30 21:37:13"
+            }
+        },
+        {
+            "id": 34934,
             "email": "foobar@example.com",
-            "name": "Foo Bar",
-            "created_at": "2013-07-23 19:39:22",
-            "updated_at": "2013-07-23 19:39:22"
-        },{
-            "id": "468",
-            "email": "lorem@ipsum.com",
-            "name": "Lorem Ipsum",
-            "created_at": "2013-07-23 19:39:22",
-            "updated_at": "2013-07-23 19:39:22"
+            "username": "foobar",
+            "name": "foobar",
+            "about": null,
+            "avatar_filename": null,
+            "avatar_height": "300",
+            "avatar_width": "300",
+            "activity_at": null,
+            "activity_count": 0,
+            "created_at": "2015-06-24 18:58:39",
+            "updated_at": "2015-06-24 18:58:39",
+            "status": {
+                "value": "enabled",
+                "created_at": "2015-06-24 18:58:39"
+            }
         }
     ]
 
-### <a id="show">Listar um usuário específico</a>
+### <a id="show">Exibir um usuário específico</a>
 
-    GET /users/:id HTTP/1.1
+    GET /account/users/:id HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -86,7 +126,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="update">Atualizar um usuário</a>
 
-    PUT /users/:id HTTP/1.1
+    PUT /account/users/:id HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -110,7 +150,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="disable">Desativar um usuário</a>
 
-    POST /users/:id/disable HTTP/1.1
+    POST /account/users/:id/disable HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -126,7 +166,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="enable">Ativar um usuário</a>
 
-    POST /users/:id/enable HTTP/1.1
+    POST /account/users/:id/enable HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
