@@ -2,23 +2,23 @@
 layout: main
 title: Pastas
 nav:
-    - text: "Lista as pasta de um usuário"
+    - text: "Listar as pasta do usuário"
       href: "#index"
-    - text: "Cria uma pasta"
+    - text: "Criar uma pasta"
       href: "#create"
-    - text: "Exibi uma pasta"
+    - text: "Exibir uma pasta"
       href: "#show"
-    - text: "Edita uma pasta"
+    - text: "Editar uma pasta"
       href: "#edit"
-    - text: "Lista as notícias de uma pasta"
+    - text: "Listar as notícias de uma pasta"
       href: "#index_articles"
-    - text: "Lista os colaboradores de uma pasta"
+    - text: "Listar os colaboradores de uma pasta"
       href: "#index_collaborators"
 ---
 
 ## Pastas
 
-### <a id="index">Lista as pasta do usuário</a>
+### <a id="index">Listar as pasta do usuário</a>
 
     GET /boards HTTP/1.1
     Accept: "application/json"
@@ -66,7 +66,7 @@ nav:
         }
     ]
 
-### <a id="create">Cria uma pasta</a>
+### <a id="create">Criar uma pasta</a>
 
     POST /boards HTTP/1.1
     Content-Type: "application/json"
@@ -102,7 +102,7 @@ nav:
         ]
     }
 
-### <a id="show">Exibi uma pasta</a>
+### <a id="show">Exibir uma pasta</a>
 
     GET /boards/:ID HTTP/1.1
     Accept: "application/json"
@@ -129,7 +129,7 @@ nav:
         ]
     }
 
-### <a id="edit">Edita uma pasta</a>
+### <a id="edit">Editar uma pasta</a>
 
     PUT /boards/:ID HTTP/1.1
     Content-Type: "application/json"
@@ -165,7 +165,7 @@ nav:
         ]
     }
 
-### <a id="index_articles">Lista as notícias de uma pasta</a>
+### <a id="index_articles">Listar as notícias de uma pasta</a>
 
 ***Requisição***
 
@@ -285,7 +285,7 @@ nav:
         }
     ]
 
-### <a id="index_collaborators">Lista os colaboradores de uma pasta</a>
+### <a id="index_collaborators">Listar os colaboradores de uma pasta</a>
 
 ***Requisição***
 

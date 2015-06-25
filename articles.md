@@ -2,17 +2,17 @@
 layout: main
 title: Artigos
 nav:
-    - text: "Lista as notícias mais publicadas"
+    - text: "Mais publicados"
       href: "#most_published"
-    - text: "Lista as notícias mais compartilhadas"
+    - text: "Mais compartilhados"
       href: "#most_shared"
-    - text: "Lista as notícias recomendadas"
+    - text: "Recomendados"
       href: "#recommended"
 ---
 
-## Pastas
+## Artigos
 
-### <a id="most_published">Lista as notícias mais publicadas</a>
+### <a id="most_published">Mais publicados</a>
 
     GET /articles/most_published/:LANGUAGE HTTP/1.1 (en | es | pt)
     Accept: "application/json"
@@ -137,7 +137,7 @@ nav:
         }
     ]
 
-### <a id="most_shared">Lista as notícias mais compartilhadas</a>
+### <a id="most_shared">Mais compartilhados</a>
 
     GET /articles/most_shared/:LANGUAGE HTTP/1.1 (en | es | pt)
     Accept: "application/json"
@@ -256,7 +256,7 @@ nav:
     ]
 
 
-### <a id="recommended">Lista as notícias recomendadas</a>
+### <a id="recommended">Recomendados</a>
 
     GET /articles/recommended/:LANGUAGE HTTP/1.1 (en | es | pt)
     Accept: "application/json"

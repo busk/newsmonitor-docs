@@ -4,7 +4,7 @@ title: Login
 nav:
     - text: "Criar um token"
       href: "#create"
-    - text: "Redirecionado o usuário"
+    - text: "Redirecionando o usuário"
       href: "#redirect"
     - text: "Exemplo em PHP"
       href: "#example"
@@ -26,7 +26,7 @@ A Api de Login permite autenticar um usuário no NewsMonitor sem que ele precise
         "token": "REZKZUhhMTQzNTE3NTIyMmJrdmFNamMzNDkzNGRXNmVqQQ=="
     }
 
-### <a id="redirect">Redirecionado o usuário</a>
+### <a id="redirect">Redirecionando o usuário</a>
 
 Com o token em mãos, o cliente redireciona o usuário para a página de login, passando o token emitido como parâmetro:
 
