@@ -14,26 +14,20 @@ Essa é uma versão simplificada da documentação da API.
 
 ### <a id="url">URL</a>
 
-`https://newsmonitor.com.br/api/`
+`https://newsmonitor.com.br/api/v1/`
 
-**Atenção:** Para a segurança de nossos clientes, a API do NewsMonitor requer o uso do protocolo HTTPS. Caso esteja tendo problemas com nossos certificados, verifique se seu cliente HTTP está utilizando SSL v3.
-
-    curl_setopt($ch, CURLOPT_SSLVERSION, 3);
-
-Se o problema persistir, recomendamos que atualize os certificados em seu servidor.
-
-    $ sudo update-ca-certificates
+**Atenção:** Para a segurança de nossos clientes, a API do NewsMonitor requer o uso do protocolo HTTPS. 
 
 ### <a id="auth">Autenticação</a>
 
-A autenticação na API utiliza o padrão HTTP Basic, sendo o user seu `public_token` e o password seu `private_token`.
+A autenticação na API utiliza o padrão HTTP Basic.
 
 Exemplo de autenticação em HTTP:
 
-    GET https://newsmonitor.com.br/api/ HTTP/1.1
-    Authorization: "Basic " + BASE64(PUBLIC_TOKEN + ":" + PRIVATE_TOKEN)
+    GET https://newsmonitor.com.br/api/v1/ HTTP/1.1
+    Authorization: "Basic " + BASE64(TOKEN + ":")
 
 Exemplo de autenticação usando o CURL em PHP:
 
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-    curl_setopt($ch, CURLOPT_USERPWD, $public_token . ":" .$private_token);
+    curl_setopt($ch, CURLOPT_USERPWD, $token . ":");
