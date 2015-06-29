@@ -14,6 +14,16 @@ nav:
       href: "#index_articles"
     - text: "Listar os colaboradores de uma pasta"
       href: "#index_collaborators"
+    - text: "Listar as permissões de uma pasta"
+      href: "#index_permissions"
+    - text: "Exibir uma permissão de uma pasta"
+      href: "#show_permission"
+    - text: "Deletar uma permissão de uma pasta"
+      href: "#delete_permission"
+    - text: "Adicionar permissão para um usuário na pasta"
+      href: "#add_permission"
+    - text: "Atulizar permissões da pasta"
+      href: "#update_permission"
 ---
 
 ## Pastas
@@ -37,6 +47,7 @@ nav:
             "updated_at": "2015-03-13T17:48:47+00:00",
             "permissions": [
                 {
+                    "id": 23,
                     "user_id": 34928,
                     "is_owner": true,
                     "unseen_articles_count": 0,
@@ -56,6 +67,7 @@ nav:
             "updated_at": "2015-03-16T14:44:43+00:00",
             "permissions": [
                 {
+                    "id": 223,
                     "user_id": 34928,
                     "is_owner": true,
                     "unseen_articles_count": 0,
@@ -93,6 +105,7 @@ nav:
         "updated_at": "2015-06-24T21:01:10+00:00",
         "permissions": [
             {
+                "id": 23,
                 "user_id": 34928,
                 "is_owner": true,
                 "unseen_articles_count": 0,
@@ -121,6 +134,7 @@ nav:
         "updated_at": "2015-03-13T17:48:47+00:00",
         "permissions": [
             {
+                "id": 23,
                 "user_id": 34928,
                 "is_owner": true,
                 "unseen_articles_count": 0,
@@ -157,6 +171,7 @@ nav:
         "updated_at": "2015-03-13T17:48:47+00:00",
         "permissions": [
             {
+                "id": 23,
                 "user_id": 34928,
                 "is_owner": true,
                 "unseen_articles_count": 0,
@@ -168,8 +183,6 @@ nav:
     }
 
 ### <a id="index_articles">Listar as notícias de uma pasta</a>
-
-***Requisição***
 
     GET /boards/:ID/articles HTTP/1.1
     Content-Type: "application/json"
@@ -290,8 +303,6 @@ nav:
 
 ### <a id="index_collaborators">Listar os colaboradores de uma pasta</a>
 
-***Requisição***
-
     GET /boards/:ID/collaborators HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
@@ -316,5 +327,146 @@ nav:
                 "value": "enabled",
                 "created_at": "2015-01-30T21:37:13+00:00"
             }
+        }
+    ]
+
+### <a id="index_permissions">Listar as permissões de uma pasta</a>
+
+    GET /boards/:ID/permissions HTTP/1.1
+    Content-Type: "application/json"
+    Accept: "application/json
+
+***Resposta***
+    
+    [
+        {
+            "id": 23,
+            "user_id": 34928,
+            "is_owner": true,
+            "unseen_articles_count": 0,
+            "last_viewed_at": "2015-06-29T20:13:33+00:00",
+            "created_at": "2015-03-13T17:48:47+00:00",
+            "updated_at": "2015-06-29T20:13:33+00:00"
+        }
+    ]
+
+### <a id="show_permission">Exibir uma permissão de uma pasta</a>
+
+    GET /boards/:ID/permissions/:ID HTTP/1.1
+    Content-Type: "application/json"
+    Accept: "application/json
+
+***Resposta***
+
+    {
+        "id": 23,
+        "user_id": 34928,
+        "is_owner": true,
+        "unseen_articles_count": 0,
+        "last_viewed_at": "2015-06-29T20:13:33+00:00",
+        "created_at": "2015-03-13T17:48:47+00:00",
+        "updated_at": "2015-06-29T20:13:33+00:00"
+    }
+
+### <a id="delete_permission">Deletar uma permissão de uma pasta</a>
+
+    DELETE /boards/:ID/permissions/:ID HTTP/1.1 (Não é possível deletar a permissão do Owner)
+    Content-Type: "application/json"
+    Accept: "application/json
+
+***Resposta***
+
+    [
+        {
+            "id": 24,
+            "user_id": 34928,
+            "is_owner": true,
+            "unseen_articles_count": 0,
+            "last_viewed_at": "2015-06-29T20:41:43+00:00",
+            "created_at": "2015-03-16T14:44:43+00:00",
+            "updated_at": "2015-06-29T20:41:43+00:00"
+        }
+    ]
+
+### <a id="add_permission">Adicionar permissão para um usuário na pasta</a>
+    
+    POST /boards/:ID/permissions/ HTTP/1.1
+    Content-Type: "application/json"
+    Accept: "application/json
+
+***Requisição*** *(Apenas para usuários da empresa)*
+
+    {
+        "user_id": 34934,
+    }
+
+***Resposta***
+
+    [
+        {
+            "id": 23,
+            "user_id": 34928,
+            "is_owner": true,
+            "unseen_articles_count": 0,
+            "last_viewed_at": "2015-06-29T20:13:33+00:00",
+            "created_at": "2015-03-13T17:48:47+00:00",
+            "updated_at": "2015-06-29T20:13:33+00:00"
+        },
+        {
+            "user_id": 34934,
+            "is_owner": false,
+            "last_viewed_at": null,
+            "unseen_articles_count": 0,
+            "updated_at": "2015-06-29T20:49:38+00:00",
+            "created_at": "2015-06-29T20:49:38+00:00",
+            "id": 66
+        }
+    ]
+
+### <a id="update_permission">Atulizar permissões da pasta</a>
+    
+    PUT /boards/:ID/permissions/ HTTP/1.1
+    Content-Type: "application/json"
+    Accept: "application/json
+
+***Requisição*** *(Apenas `user_id`. O Owner não é alterado)*
+
+    {
+        "permissions":[
+            {
+                "user_id": 34938
+            }
+        ]
+    }
+
+***Resposta***
+
+    [
+        {
+            "id": 23,
+            "user_id": 34928,
+            "is_owner": true,
+            "unseen_articles_count": 0,
+            "last_viewed_at": "2015-06-29T20:13:33+00:00",
+            "created_at": "2015-03-13T17:48:47+00:00",
+            "updated_at": "2015-06-29T20:13:33+00:00"
+        },
+        {
+            "id": 66,
+            "user_id": 34934,
+            "is_owner": false,
+            "last_viewed_at": null,
+            "unseen_articles_count": 0,
+            "updated_at": "2015-06-29T21:15:04+00:00",
+            "created_at": "2015-06-29T21:15:04+00:00"
+        },
+        {
+            "user_id": 34938,
+            "is_owner": false,
+            "unseen_articles_count": 0,
+            "last_viewed_at": null,
+            "created_at": "2015-06-29T21:09:46+00:00",
+            "updated_at": "2015-06-29T21:09:46+00:00",
+            "id": 69
         }
     ]
