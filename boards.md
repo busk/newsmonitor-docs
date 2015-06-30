@@ -22,7 +22,7 @@ nav:
       href: "#delete_permission"
     - text: "Adicionar permissão para um usuário na pasta"
       href: "#add_permission"
-    - text: "Atulizar permissões da pasta"
+    - text: "Atualizar permissões da pasta"
       href: "#update_permission"
 ---
 
@@ -423,7 +423,7 @@ nav:
         }
     ]
 
-### <a id="update_permission">Atulizar permissões da pasta</a>
+### <a id="update_permission">Atualizar permissões da pasta</a>
     
     PUT /boards/:ID/permissions/ HTTP/1.1
     Content-Type: "application/json"
