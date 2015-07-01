@@ -12,8 +12,6 @@ nav:
       href: "#edit"
     - text: "Listar as notícias de uma pasta"
       href: "#index_articles"
-    - text: "Listar os colaboradores de uma pasta"
-      href: "#index_collaborators"
     - text: "Listar as permissões de uma pasta"
       href: "#index_permissions"
     - text: "Exibir uma permissão de uma pasta"
@@ -298,35 +296,6 @@ nav:
                 "updated_at": "2015-06-25T13:52:46+00:00"
             },
             "comments": []
-        }
-    ]
-
-### <a id="index_collaborators">Listar os colaboradores de uma pasta</a>
-
-    GET /boards/:ID/collaborators HTTP/1.1
-    Content-Type: "application/json"
-    Accept: "application/json"
-
-***Resposta***
-    
-    [
-        {
-            "id": 34928,
-            "email": "barfoo@example.com",
-            "username": "barfoo",
-            "name": "barfoo",
-            "about": null,
-            "avatar_filename": null,
-            "avatar_height": "300",
-            "avatar_width": "300",
-            "activity_at": "2015-06-25T14:05:05+00:00",
-            "activity_count": 3236,
-            "created_at": "2015-01-30T21:36:41+00:00",
-            "updated_at": "2015-06-25T13:52:46+00:00",
-            "status": {
-                "value": "enabled",
-                "created_at": "2015-01-30T21:37:13+00:00"
-            }
         }
     ]
 
