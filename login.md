@@ -32,12 +32,12 @@ A Api de Login permite autenticar um usuário no NewsMonitor sem que ele precise
 Com o token em mãos, o cliente redireciona o usuário para a página de login, passando o token emitido como parâmetro:
 
     HTTP/1.1 302 Found
-    Location: https://newsmonitor.com.br/auth/token/TOKEN
+    Location: https://newsmonitor.com.br/auth/token/:TOKEN
 
 ### <a id="example">Exemplo completo em PHP</a>
 
     // obtains token
-    $url = 'https://newsmonitor.com.br/api/account/token?' . http_build_query(array('email' => 'foobar@example.com'));
+    $url = 'https://newsmonitor.com.br/api/v1/account/users/'.$id.'/token'
     
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
