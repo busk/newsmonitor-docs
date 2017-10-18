@@ -12,7 +12,7 @@ nav:
 
 ### <a id="most_published">Mais publicados</a>
 
-    GET /articles/most_published/:LANGUAGE HTTP/1.1
+    GET /api/v1/articles/most_published/:LANGUAGE HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -145,7 +145,7 @@ nav:
 
 ### <a id="most_shared">Mais compartilhados</a>
 
-    GET /articles/most_shared/:LANGUAGE HTTP/1.1 
+    GET /api/v1/articles/most_shared/:LANGUAGE HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 

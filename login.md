@@ -17,7 +17,7 @@ A Api de Login permite autenticar um usuário no NewsMonitor sem que ele precise
 
 ### <a id="create">Criar um token</a>
 
-    POST /account/users/:ID/token HTTP/1.1
+    POST /api/v1/account/users/:ID/token HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 

@@ -28,7 +28,7 @@ nav:
 
 ### <a id="index">Listar as pasta do usuário</a>
 
-    GET /boards HTTP/1.1
+    GET /api/v1/boards HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -79,7 +79,7 @@ nav:
 
 ### <a id="create">Criar uma pasta</a>
 
-    POST /boards HTTP/1.1
+    POST /api/v1/boards HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -116,7 +116,7 @@ nav:
 
 ### <a id="show">Exibir uma pasta</a>
 
-    GET /boards/:ID HTTP/1.1
+    GET /api/v1/boards/:ID HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -145,7 +145,7 @@ nav:
 
 ### <a id="edit">Editar uma pasta</a>
 
-    PUT /boards/:ID HTTP/1.1
+    PUT /api/v1/boards/:ID HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -182,7 +182,7 @@ nav:
 
 ### <a id="index_articles">Listar as notícias de uma pasta</a>
 
-    GET /boards/:ID/articles HTTP/1.1
+    GET /api/v1/boards/:ID/articles HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -301,7 +301,7 @@ nav:
 
 ### <a id="index_permissions">Listar as permissões de uma pasta</a>
 
-    GET /boards/:ID/permissions HTTP/1.1
+    GET /api/v1/boards/:ID/permissions HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json
 
@@ -321,7 +321,7 @@ nav:
 
 ### <a id="show_permission">Exibir uma permissão de uma pasta</a>
 
-    GET /boards/:ID/permissions/:ID HTTP/1.1
+    GET /api/v1/boards/:ID/permissions/:ID HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json
 
@@ -359,7 +359,7 @@ nav:
 
 ### <a id="add_permission">Adicionar permissão para um usuário na pasta</a>
     
-    POST /boards/:ID/permissions/ HTTP/1.1
+    POST /api/v1/boards/:ID/permissions/ HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json
 
@@ -394,7 +394,7 @@ nav:
 
 ### <a id="update_permission">Atualizar permissões da pasta</a>
     
-    PUT /boards/:ID/permissions/ HTTP/1.1
+    PUT /api/v1/boards/:ID/permissions/ HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json
 
