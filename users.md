@@ -22,7 +22,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="create">Criar um usuário</a>
 
-    POST /account/users HTTP/1.1
+    POST /api/v1/account/users HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -51,7 +51,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="index">Listar todos usuários</a>
 
-    GET /account/users HTTP/1.1
+    GET /api/v1/account/users HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -98,7 +98,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="show">Exibir um usuário específico</a>
 
-    GET /account/users/:id HTTP/1.1
+    GET /api/v1/account/users/:id HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -114,7 +114,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="update">Atualizar um usuário</a>
 
-    PUT /account/users/:id HTTP/1.1
+    PUT /api/v1/account/users/:id HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -138,7 +138,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="disable">Desativar um usuário</a>
 
-    POST /account/users/:id/disable HTTP/1.1
+    POST /api/v1/account/users/:id/disable HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -154,7 +154,7 @@ A API de usuários permite criar, atualizar e desativar usuários.
 
 ### <a id="enable">Ativar um usuário</a>
 
-    POST /account/users/:id/enable HTTP/1.1
+    POST /api/v1/account/users/:id/enable HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 

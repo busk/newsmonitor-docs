@@ -12,7 +12,7 @@ nav:
 
 ### <a id="index">Listar os monitoramentos do usuário</a>
 
-    GET /v1/monitorings HTTP/1.1
+    GET /api/v1/monitorings HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
@@ -138,7 +138,7 @@ nav:
 
 ### <a id="show">Exibir um monitoramento</a>
 
-    GET /v1/monitorings/:ID/articles HTTP/1.1 
+    GET /api/v1/monitorings/:ID/articles HTTP/1.1
     Content-Type: "application/json"
     Accept: "application/json"
 
